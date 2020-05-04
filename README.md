@@ -27,4 +27,4 @@ To repeat our numerical experiments, run as follows:
 * Visualization
   1. python visualize.py
 
-My computer configuration is Intel(R) Core(TM) i5-4200H CPU @ 2.80GHz with 8 GB RAM. Three simulations cost nearly 10 minutes, 5 hours and 25 minutes.
+Due to randomness, the results maybe not be reproduced in the simulations on the synthetic benchmarks. But the results must be similar. Our computer configuration is Intel(R) Core(TM) i5-4200H CPU @ 2.80GHz with 8 GB RAM. Three simulations cost nearly 10 minutes, 5 hours and 25 minutes.
