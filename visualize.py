@@ -17,28 +17,28 @@ colors = px.colors.qualitative.Set1
 # Planted l-partition benchmarks
 with open('Planted_LPartition_benchmarks/Fastgreedy_performance.pickle', 'rb') as f:
     Fastgreedy_performance = pickle.load(f)
-    Fastgreedy_performance[0] = np.reshape(Fastgreedy_performance[0], (9, 1000)).mean(axis=1)
-    Fastgreedy_performance[1] = np.reshape(Fastgreedy_performance[1], (12, 1000)).mean(axis=1)
+    Fastgreedy_performance[0] = np.reshape(Fastgreedy_performance[0], (9, 10000)).mean(axis=1)
+    Fastgreedy_performance[1] = np.reshape(Fastgreedy_performance[1], (12, 10000)).mean(axis=1)
 with open('Planted_LPartition_benchmarks/Infomap_performance.pickle', 'rb') as f:
     Infomap_performance = pickle.load(f)
-    Infomap_performance[0] = np.reshape(Infomap_performance[0], (9, 1000)).mean(axis=1)
-    Infomap_performance[1] = np.reshape(Infomap_performance[1], (12, 1000)).mean(axis=1)
+    Infomap_performance[0] = np.reshape(Infomap_performance[0], (9, 10000)).mean(axis=1)
+    Infomap_performance[1] = np.reshape(Infomap_performance[1], (12, 10000)).mean(axis=1)
 with open('Planted_LPartition_benchmarks/LPA_performance.pickle', 'rb') as f:
     LPA_performance = pickle.load(f)
-    LPA_performance[0] = np.reshape(LPA_performance[0], (9, 1000)).mean(axis=1)
-    LPA_performance[1] = np.reshape(LPA_performance[1], (12, 1000)).mean(axis=1)
+    LPA_performance[0] = np.reshape(LPA_performance[0], (9, 10000)).mean(axis=1)
+    LPA_performance[1] = np.reshape(LPA_performance[1], (12, 10000)).mean(axis=1)
 with open('Planted_LPartition_benchmarks/Louvein_performance.pickle', 'rb') as f:
     Louvein_performance = pickle.load(f)
-    Louvein_performance[0] = np.reshape(Louvein_performance[0], (9, 1000)).mean(axis=1)
-    Louvein_performance[1] = np.reshape(Louvein_performance[1], (12, 1000)).mean(axis=1)
+    Louvein_performance[0] = np.reshape(Louvein_performance[0], (9, 10000)).mean(axis=1)
+    Louvein_performance[1] = np.reshape(Louvein_performance[1], (12, 10000)).mean(axis=1)
 with open('Planted_LPartition_benchmarks/Walktrap_performance.pickle', 'rb') as f:
     Walktrap_performance = pickle.load(f)
-    Walktrap_performance[0] = np.reshape(Walktrap_performance[0], (9, 1000)).mean(axis=1)
-    Walktrap_performance[1] = np.reshape(Walktrap_performance[1], (12, 1000)).mean(axis=1)
+    Walktrap_performance[0] = np.reshape(Walktrap_performance[0], (9, 10000)).mean(axis=1)
+    Walktrap_performance[1] = np.reshape(Walktrap_performance[1], (12, 10000)).mean(axis=1)
 with open('Planted_LPartition_benchmarks/FPPM_performance.pickle', 'rb') as f:
     FPPM_performance = pickle.load(f)
-    FPPM_performance[0] = np.reshape(FPPM_performance[0], (9, 1000)).mean(axis=1)
-    FPPM_performance[1] = np.reshape(FPPM_performance[1], (12, 1000)).mean(axis=1)
+    FPPM_performance[0] = np.reshape(FPPM_performance[0], (9, 10000)).mean(axis=1)
+    FPPM_performance[1] = np.reshape(FPPM_performance[1], (12, 10000)).mean(axis=1)
 
 fig = make_subplots(rows=1, cols=2, shared_yaxes=True, horizontal_spacing=0.01)
 traces = [Fastgreedy_performance, Infomap_performance, LPA_performance,
@@ -80,27 +80,27 @@ fig.write_image('Visualization/Planted_LPartition_benchmarks.eps')
 with open('LFR_benchmarks/Fastgreedy_performance.pickle', 'rb') as f:
     Fastgreedy_performance = pickle.load(f)
     for _ in range(3):
-        Fastgreedy_performance[_] = np.reshape(Fastgreedy_performance[_], (9, 1000)).mean(axis=1)
+        Fastgreedy_performance[_] = np.reshape(Fastgreedy_performance[_], (9, 10000)).mean(axis=1)
 with open('LFR_benchmarks/Infomap_performance.pickle', 'rb') as f:
     Infomap_performance = pickle.load(f)
     for _ in range(3):
-        Infomap_performance[_] = np.reshape(Infomap_performance[_], (9, 1000)).mean(axis=1)
+        Infomap_performance[_] = np.reshape(Infomap_performance[_], (9, 10000)).mean(axis=1)
 with open('LFR_benchmarks/LPA_performance.pickle', 'rb') as f:
     LPA_performance = pickle.load(f)
     for _ in range(3):
-        LPA_performance[_] = np.reshape(LPA_performance[_], (9, 1000)).mean(axis=1)
+        LPA_performance[_] = np.reshape(LPA_performance[_], (9, 10000)).mean(axis=1)
 with open('LFR_benchmarks/Louvein_performance.pickle', 'rb') as f:
     Louvein_performance = pickle.load(f)
     for _ in range(3):
-        Louvein_performance[_] = np.reshape(Louvein_performance[_], (9, 1000)).mean(axis=1)
+        Louvein_performance[_] = np.reshape(Louvein_performance[_], (9, 10000)).mean(axis=1)
 with open('LFR_benchmarks/Walktrap_performance.pickle', 'rb') as f:
     Walktrap_performance = pickle.load(f)
     for _ in range(3):
-        Walktrap_performance[_] = np.reshape(Walktrap_performance[_], (9, 1000)).mean(axis=1)
+        Walktrap_performance[_] = np.reshape(Walktrap_performance[_], (9, 10000)).mean(axis=1)
 with open('LFR_benchmarks/FPPM_performance.pickle', 'rb') as f:
     FPPM_performance = pickle.load(f)
     for _ in range(3):
-        FPPM_performance[_] = np.reshape(FPPM_performance[_], (9, 1000)).mean(axis=1)
+        FPPM_performance[_] = np.reshape(FPPM_performance[_], (9, 10000)).mean(axis=1)
 
 fig = make_subplots(rows=1, cols=3, shared_yaxes=True, horizontal_spacing=0.01)
 traces = [Fastgreedy_performance, Infomap_performance, LPA_performance,
