@@ -17,7 +17,7 @@ FPPM_performance = [[], [], []]
 
 for idx, N in enumerate(SIZES):
     for Mu in range(1, 10):
-        for _ in range(10):
+        for _ in range(100):
             file = DIR_FMT.format(N) + GML_FMT.format(Mu, _)
             g = ig.Graph.Read_GML(file)
             ground_truth = [int(v['value']) for v in g.vs]
