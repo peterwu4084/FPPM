@@ -15,13 +15,13 @@ if __name__ == '__main__':
 
     
     for dout in range(1, 10):
-        for _ in range(10):
+        for _ in range(100):
             din = 18 - dout
             g = Planted_LPartition(pin=din/31, pout=dout/32, **FIRST_PARAMETER_GROUP)
             nx.write_gml(g, DIR_FMT.format(64)+GML_FML.format(din, _))
 
     for din in range(4, 16):
-        for _ in range(10):
+        for _ in range(100):
             dout = 16 - din
             g = Planted_LPartition(pin=din/31, pout=dout/96, **SECOND_PARAMETER_GROUP)
             nx.write_gml(g, DIR_FMT.format(128)+GML_FML.format(din, _))
