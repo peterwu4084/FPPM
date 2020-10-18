@@ -224,11 +224,15 @@ def FPPM(G, theta=3):
         The ith element is the label of vertex i.
     '''
     d = nx.diameter(G)
+    if d <= 3:
+        ds = {2}
+    else:
+        ds = set(range(2, d))
     T = transition_matrix(G)
     S = np.zeros(T.shape)
-    for idx, F in enumerate(first_passage_prob(T, d)):
-        S += np.corrcoef(F) * idx
-    S /= d*(d-1)/2
+    for idx, F in enumerate(first_passage_prob(T, max(ds)+1)):
+        S += np.corrcoef(F)
+    S /= len(ds)
     dendrogram = hierarchical_clustering(S)
     partition_Q = select_by_Q(dendrogram, G)
     partition = remove_small_communities(partition_Q, G, S, theta)
@@ -258,11 +262,15 @@ def FPPM_repeat(G, theta=3, repeat=100):
         The ith element is the label of vertex i.
     '''
     d = nx.diameter(G)
+    if d <= 3:
+        ds = {2}
+    else:
+        ds = set(range(2, d))
     T = transition_matrix(G)
     S = np.zeros(T.shape)
-    for idx, F in enumerate(first_passage_prob(T, d)):
-        S += np.corrcoef(F) * idx
-    S /= d*(d-1)/2
+    for idx, F in enumerate(first_passage_prob(T, max(ds)+1)):
+        S += np.corrcoef(F)
+    S /= len(ds)
     dendrogram = hierarchical_clustering(S)
     partition_Q = select_by_Q(dendrogram, G)
     partitions = []
