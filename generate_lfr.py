@@ -72,7 +72,7 @@ def generate(N, k, maxk, t1, t2, minc, maxc):
     return : None
     '''
     for mu in range(1, 10):
-        for _ in range(10):
+        for _ in range(100):
             os.system(BENCHMARK.format(N, k, maxk, mu/10, t1, t2, minc, maxc))
             gml_file = DIR_FMT.format(N) + GML_FMT.format(mu, _)
             dat2gml('network.dat', 'community.dat', gml_file)
