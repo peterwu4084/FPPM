@@ -16,7 +16,7 @@ FPPM_performance = [[], []]
 
 # first parameter group
 for din in range(9, 18):
-    for _ in range(10):
+    for _ in range(100):
         file = DIR_FMT.format(64) + GML_FMT.format(din, _)
         g = ig.Graph.Read_GML(file)
         ground_truth = [int(v['value']) for v in g.vs]
@@ -41,7 +41,7 @@ for din in range(9, 18):
 
 # second parameter group
 for din in range(4, 16):
-    for _ in range(10):
+    for _ in range(100):
         file = DIR_FMT.format(128) + GML_FMT.format(din, _)
         g = ig.Graph.Read_GML(file)
         ground_truth = [int(v['value']) for v in g.vs]
